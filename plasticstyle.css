@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --main-color: rgb(0, 149, 255);
+    --second-color: tomato;
+    --last-color: gold;
+    --main-font-color: rgb(8, 7, 27);
+    --second-font-color: rgba(8, 7, 27, 0.836);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-font-color);
+}
+
+.container {
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- default css --------------------- */
+.btn {
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+}
+
+/* -------------------- default css --------------------- */
+
+#home {
+    height: 100vh;
+    position: relative;
+}
+
+
+
+.menuLink.active {
+    background: rgb(0, 149, 255);
+}
+
+.menu {
+    display: block;
+    /* width: 95%; */
+    /* background: yellow; */
+    margin: 0 auto;
+    z-index: 9;
+    position: absolute;
+    padding: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 95%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.menuLink {
+    padding: 10px;
+    margin: 0 10px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.menuLink:hover {
+    background: var(--main-color);
+}
+
+.trigle1 {
+    width: 20%;
+    height: 80%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    clip-path: polygon(100% 60%, 0 0, 0 100%);
+    overflow: hidden;
+}
+
+
+.trigle2 {
+    position: absolute;
+    z-index: 1;
+    width: 70%;
+    height: 66%;
+    clip-path: polygon(0 0, 89% 0, 64% 44%, 30% 100%, 0% 24%);
+    overflow: hidden;
+}
+
+.trigle3 {
+    position: absolute;
+    z-index: 1;
+    width: 70%;
+    height: 65%;
+    bottom: 0;
+    left: 2%;
+    clip-path: polygon(58% 0, 0% 100%, 100% 100%);
+    overflow: hidden;
+}
+
+.triangleoverlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.trigle1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.trigle2 img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.trigle3 img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroContainer {
+    position: absolute;
+    z-index: 9;
+    bottom: 30%;
+    right: 2%;
+}
+
+.heroContainer h1 {
+    font-size: 250%;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 800;
+
+}
+
+.tomato {
+    background: var(--second-color);
+    display: inline-block;
+    color: #fff;
+    font-size: 90%;
+    padding: 5px;
+}
+
+
+
+.heroContainer p {
+    color: var(--second-font-color);
+    font-size: 90%;
+    line-height: 150%;
+    margin: 15px 0;
+}
+
+.donateBtn {
+    text-transform: uppercase;
+    background: var(--last-color);
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0;
+    transition: all .5s linear;
+    animation: lighting 1s linear infinite alternate;
+}
+
+@keyframes lighting {
+    from {
+        box-shadow: 5px 3px 15px white;
+    }
+
+    to {
+        box-shadow: 5px 3px 15px var(--last-color);
+
+    }
+}
+
+.socialLinkContainer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding-right: 5%;
+    line-height: 50px;
+}
+
+.socialLink {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    user-select: none;
+    margin: 0px 10px;
+    transition: all .5s linear;
+    box-shadow: 0px 0px 0px var(--second-font-color);
+}
+
+.socialLink:hover {
+    box-shadow: 1px 1px 3px var(--second-font-color);
+
+}
+
+.socialLink a {
+    font-size: 150%;
+    color: var(--second-font-color);
+}
+
+/* second section */
+
+.top{
+    width: 800px;
+    height: 180px;
+    margin: 50px 0 0 150px;
+}
+
+.top h1{
+    font-size: 16px;
+    text-align: center;
+}
+
+.top > p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.icon{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.icon .water{
+    width: 150px;
+    height: 50px;
+}
+
+.icon .swimmer{
+    width: 150px;
+    height: 50px;
+}
+
+.icon .handholdingwater{
+    width: 150px;
+    height: 50px;
+}
+
+.icon .water p,
+.icon .swimmer p,
+.icon .handholdingwater p{
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.left{
+    width: 900px;
+    height: 250px;
+
+    margin-left: 100px;
+
+    position: relative;
+}
+
+.left h1{
+    width: 250px;
+    font-size: 20px;
+}
+
+.left p{
+    width: 500px;
+    font-size: 14px;
+}
+
+.left a{
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 25px;
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 5px 10px;
+}
+
+.left .image{
+    width: 400px;
+    height: 200px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.left .image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.left .image::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('splash.jpg');
+    background-size: 100%;
+    background-position: center;
+    mix-blend-mode: screen;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right{
+    width: 900px;
+    height: 250px;
+
+    margin-left: 100px;
+
+    position: relative;
+}
+
+.right h1{
+    width: 250px;
+    font-size: 20px;
+
+    margin-left: 400px;
+}
+
+.right p{
+    width: 500px;
+    font-size: 14px;
+
+    margin-left: 400px;
+}
+
+.right a{
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 25px;
+    display: inline-block;
+
+    margin-top: 10px;
+    margin-left: 400px;
+
+    padding: 5px 10px;
+}
+
+.right .image{
+    width: 400px;
+    height: 200px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right .image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.right .image::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('splash.jpg');
+    background-size: 100%;
+    background-position: center;
+    mix-blend-mode: screen;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center{
+    width: 800px;
+    height: 100px;
+
+    margin-left: 150px;
+}
+
+.center h1{
+    font-size: 18px;
+    text-align: center;
+}
+
+.center p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.campaign{
+    width: 1000px;
+    height: 600px;
+
+    margin-left: 44px;
+    margin-top: 25px;
+}
+
+.campaign > span{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
+    display: block;
+}
+
+.campaign h2{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.campaign .main{
+    width: 1000px;
+    display: flex;
+}
+
+.campaign .main .container{
+    width: 500px;
+    height: 260px;
+    background-color: #f4f4f4;
+
+    padding: 15px;
+
+    display: flex; 
+}
+
+.campaign .main .container .text{
+    width: 50%;
+}
+
+.campaign .main .container .text > span{
+    font-size: 14px;
+    color: green;
+    background-color: rgb(226, 247, 195);
+
+    padding: 5px;
+}   
+
+.campaign .main .container .text h3{
+    margin-top: 10px;
+}
+
+.campaign .main .container .text p{
+    color: rgb(175, 170, 170);
+    line-height: 25px;
+}
+
+.campaign .main .container .text .barContainer{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    background:grey;
+    overflow:hidden;
+}
+
+.barContainer .bar{
+    width:70%;
+    height:100%;
+    line-height:20px;
+    color:#fff;
+    background:green;
+    text-align:center;
+}
+
+.campaign .main .container .text .raised{
+    color: grey;
+    margin: 20px 0;
+}
+
+.campaign .main .container .text .raised span{
+    color: #000;
+    font-weight: 600;
+}
+
+.campaign .main .container .text a{
+    text-decoration: none;
+    color: #fff;
+    background-color: green;
+    border-radius: 5px;
+
+    display: inline-block;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.campaign .main .container .photo{
+    width: 50%;
+}
+
+.campaign .main .container .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.campaign .second-main{
+    width: 1000px;
+    display: flex;
+}
+
+.campaign .second-main .container{
+    width: 500px;
+    height: 260px;
+    background-color: #f4f4f4;
+
+    padding: 15px;
+    padding-top: 0;
+    margin-top: 0;
+
+    display: flex; 
+}
+
+.campaign .second-main .container .text{
+    width: 50%;
+    margin: 15px auto auto 25px;
+}
+
+.campaign .second-main .container .text > span{
+    font-size: 14px;
+    color: green;
+    background-color: rgb(226, 247, 195);
+
+    padding: 5px;
+}   
+
+.campaign .second-main .container .text h3{
+    margin-top: 10px;
+}
+
+.campaign .second-main .container .text p{
+    color: rgb(175, 170, 170);
+    line-height: 25px;
+}
+
+.campaign .second-main .container .text .barContainer{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    background:grey;
+    overflow:hidden;
+}
+
+.barContainer .bar{
+    width:70%;
+    height:100%;
+    line-height:20px;
+    color:#fff;
+    background:green;
+    text-align:center;
+}
+
+.campaign .second-main .container .text .raised{
+    color: grey;
+    margin: 20px 0;
+}
+
+.campaign .second-main .container .text .raised span{
+    color: #000;
+    font-weight: 600;
+}
+
+.campaign .second-main .container .text a{
+    text-decoration: none;
+    color: #fff;
+    background-color: green;
+    border-radius: 5px;
+
+    display: inline-block;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.campaign .second-main .container .photo{
+    width: 50%;
+}
+
+.campaign .second-main .container .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
